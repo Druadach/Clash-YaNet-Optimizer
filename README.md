@@ -22,6 +22,20 @@
 将 [`clash-verge-rev-fixed.js`](./clash-verge-rev-fixed.js) 导入或粘贴到客户端的
 JavaScript 覆写/扩展脚本中。也可以直接修改脚本顶部的 `defaultArgs` 设置默认行为。
 
+远程订阅推荐使用 GitHub Raw 直链：
+
+```text
+https://raw.githubusercontent.com/Druadach/Clash-YaNet-Optimizer/main/clash-verge-rev-fixed.js
+```
+
+国内网络也可使用 jsDelivr 备用链接：
+
+```text
+https://cdn.jsdelivr.net/gh/Druadach/Clash-YaNet-Optimizer@main/clash-verge-rev-fixed.js
+```
+
+请勿使用包含 `/blob/` 的 GitHub 文件浏览页面地址，该页面返回 HTML，不能作为远程脚本执行。
+
 常用参数：
 
 | 参数 | 默认值 | 说明 |
