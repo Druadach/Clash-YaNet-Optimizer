@@ -3,13 +3,13 @@
 面向 Clash Verge Rev、Mihomo Party 等 Mihomo 客户端的通用优化覆写脚本。
 
 本项目基于 [dahaha-365/YaNet](https://github.com/dahaha-365/YaNet) 的
-[`Mihomo/global_script.js`](https://github.com/dahaha-365/YaNet/blob/febda695a817297bacc63a37b0e0aa16d5cd00fe/Mihomo/global_script.js)
-修改，基线提交为 `febda695a817297bacc63a37b0e0aa16d5cd00fe`。
+[`Mihomo/global_script.js`](https://github.com/dahaha-365/YaNet/blob/8a31a1b62c497c99cbca2bc28d606f163562c754/Mihomo/global_script.js)
+修改，基线提交为 Aug 7, 2026 `8a31a1b62c497c99cbca2bc28d606f163562c754`。
 
 ## 主要优化
 
-- 地区与全局自动测速，支持国家/地区代码识别和高倍率节点保护。
-- 新增俄罗斯地区专用策略。
+- 增加地区与全局自动测速，支持国家/地区代码识别和高倍率节点保护。
+- 增加俄罗斯地区专用策略。
 - 服务规则可独立启用，可通过 `ruleSet` 设置全部或按需分流。
 - 保留机场节点原名，为脚本生成的代理和策略组分配唯一名称，避免同名和策略环。
 - 默认保留客户端的 LAN、控制器、端口、密钥、外部 UI 和 TUN 设置。

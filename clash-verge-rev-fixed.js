@@ -2,7 +2,7 @@
  * Clash Verge Rev / Mihomo Party 优化脚本
  * 原作者: dahaha-365 (YaNet)
  * GitHub：https://github.com/dahaha-365/YaNet
- * 基线提交: febda695a817297bacc63a37b0e0aa16d5cd00fe
+ * 基线提交: 8a31a1b62c497c99cbca2bc28d606f163562c754
  * 优化内容: 自动测速、地区模式切换、国家代码识别、倍率识别、自定义规则与安全回退、规范分组名称、俄罗斯专用策略、自定义规则与服务开关、参数解析、DNS/TUN覆盖、非通用端口直连及无效规则配置
  */
 
@@ -602,13 +602,6 @@ const serviceConfigs = [
     icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TVB.png',
     url: 'https://viu.tv/',
     rules: [
-      'GEOSITE,tvb,港台服务',
-      'GEOSITE,hkt,港台服务',
-      'GEOSITE,hkbn,港台服务',
-      'GEOSITE,hkopentv,港台服务',
-      'GEOSITE,hkedcity,港台服务',
-      'GEOSITE,hkgolden,港台服务',
-      'GEOSITE,hketgroup,港台服务',
       'RULE-SET,hk-media,港台服务',
       'RULE-SET,tw-media,港台服务',
     ],
