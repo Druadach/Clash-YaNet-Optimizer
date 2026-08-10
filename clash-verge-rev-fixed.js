@@ -52,7 +52,7 @@ const _foreignIpDns = '8.8.8.8;94.140.14.14'
 
 const defaultArgs = {
   enable: true,
-  ruleSet: 'manual', // manual=使用下方开关，all=全部启用，也可填写分号分隔的服务 key
+  ruleSet: 'all', // 默认全部启用；可通过参数传入 manual 或服务 key 列表覆盖
   regionSet: 'all',
   interfaceName: '',
   excludeHighPercentage: true,
@@ -263,13 +263,6 @@ const ruleOptions = {
   ads: true,
 }
 
-const legacyServiceKeyAliases = {
-  openai: 'ai',
-  tvb: 'mediahktw',
-  mediahmt: 'mediahktw',
-  mediahktw: 'mediahktw',
-}
-
 if (ruleSet === 'all') {
   Object.keys(ruleOptions).forEach((key) => (ruleOptions[key] = true))
 } else if (typeof ruleSet === 'string' && ruleSet !== 'manual') {
@@ -279,9 +272,8 @@ if (ruleSet === 'all') {
     .map((s) => s.trim().toLowerCase())
     .filter((key) => key.length > 0)
   enabledKeys.forEach((key) => {
-    const normalizedKey = legacyServiceKeyAliases[key] || key
-    if (Object.prototype.hasOwnProperty.call(ruleOptions, normalizedKey)) {
-      ruleOptions[normalizedKey] = true
+    if (Object.prototype.hasOwnProperty.call(ruleOptions, key)) {
+      ruleOptions[key] = true
     }
   })
 }
@@ -476,7 +468,6 @@ if (regionSet === 'ALL') {
   const enabledRegions = regionSet
     .split(/[;,]/)
     .map((s) => s.trim())
-    .map((code) => (code === 'TK' ? 'TR' : code))
     .filter((code) => code.length > 0)
   regionDefinitions = allRegionDefinitions.filter((r) => {
     const prefix = r.name.substring(0, 2) // 获取前两个字母
