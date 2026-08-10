@@ -1142,7 +1142,7 @@ function main(config) {
   const functionalGroups = []
   const defaultGroupName = allocatePolicyName('默认节点')
   const downloadGroupName = allocatePolicyName('下载软件')
-  const otherTrafficGroupName = allocatePolicyName('其他流量')
+  const otherTrafficGroupName = allocatePolicyName('其他网站')
   const domesticGroupName = allocatePolicyName('国内网站')
 
   functionalGroups.push({
@@ -1224,8 +1224,8 @@ function main(config) {
     'GEOIP,private,直连,no-resolve',
     'GEOSITE,cn,直连',
     'GEOIP,cn,直连,no-resolve',
-    // 'GEOSITE,geolocation-!cn,其他流量',
-    'MATCH,其他流量'
+    // 'GEOSITE,geolocation-!cn,其他网站',
+    'MATCH,其他网站'
   )
 
   functionalGroups.push(
@@ -1237,7 +1237,6 @@ function main(config) {
         directProxyName,
         rejectProxyName,
         defaultGroupName,
-        domesticGroupName,
         ...regionGroupNames,
       ],
       icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Download.png',
@@ -1246,7 +1245,7 @@ function main(config) {
       ...groupBaseOption,
       name: otherTrafficGroupName,
       type: 'select',
-      proxies: [defaultGroupName, domesticGroupName, ...regionGroupNames],
+      proxies: [defaultGroupName, directProxyName, ...regionGroupNames],
       icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming!CN.png',
     },
     {
