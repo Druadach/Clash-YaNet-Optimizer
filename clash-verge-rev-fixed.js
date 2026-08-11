@@ -294,6 +294,7 @@ const directPortRules = [
 ]
 
 const baseRules = [
+  'DOMAIN,www.bing.com,直连',
   'GEOSITE,category-collaborate-cn,直连',
   'GEOSITE,category-container,默认节点',
   // 'GEOSITE,category-netdisk-!cn,默认节点',
@@ -510,6 +511,7 @@ const dnsConfig = {
   // },
   'proxy-server-nameserver': chinaDNS,
   'nameserver-policy': {
+    'www.bing.com': 'system',
     'geosite:private': 'system',
     'geosite:tld-cn,cn,steam@cn,category-games@cn,microsoft@cn,apple@cn,category-game-platforms-download@cn,category-public-tracker':
     chinaDNS,
