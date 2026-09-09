@@ -4,7 +4,7 @@
 
 本项目基于 [dahaha-365/YaNet](https://github.com/dahaha-365/YaNet) 的
 [`Mihomo/global_script.js`](https://github.com/dahaha-365/YaNet/blob/8a31a1b62c497c99cbca2bc28d606f163562c754/Mihomo/global_script.js)
-修改，基线提交为 Aug 7, 2026 `8a31a1b62c497c99cbca2bc28d606f163562c754`。
+修改，基准版本为 2026-08-07 `8a31a1b62c497c99cbca2bc28d606f163562c754`。
 
 ## 主要优化
 
