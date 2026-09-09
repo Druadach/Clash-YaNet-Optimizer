@@ -767,6 +767,7 @@ const serviceConfigs = [
   {
     key: 'microsoft',
     name: '微软服务',
+    directFirst: true,
     icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png',
     url: 'https://www.msftconnecttest.com/connecttest.txt',
     rules: ['GEOSITE,microsoft@cn,国内网站', 'GEOSITE,microsoft,微软服务'],
