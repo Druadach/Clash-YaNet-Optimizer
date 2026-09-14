@@ -41,7 +41,7 @@ https://cdn.jsdelivr.net/gh/Druadach/Clash-YaNet-Optimizer@main/clash-verge-rev-
 | 参数 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
 | `enable` | boolean | `true` | 总开关；设为 `false` 时原样返回输入配置。 |
-| `ruleSet` | string | `all` | 默认启用全部服务组；在 SubStore 链接参数中传入的 `ruleSet` 会覆盖该默认值。传入 `manual` 使用内置受限组合，也可填写用分号或逗号分隔的服务 key，例如 `ruleSet=github;ads` 仅启用 GitHub 和广告过滤。可用服务 key 为：`apple`、`microsoft`、`github`、`google`、`ai`、`spotify`、`youtube`、`bahamut`、`netflix`、`tiktok`、`disney`、`pixiv`、`hbo`、`mediahktw`、`biliintl`、`hulu`、`primevideo`、`telegram`、`line`、`whatsapp`、`games`、`japan`、`russia`、`ads`。 |
+| `ruleSet` | string | `all` | 默认启用全部服务组；在 SubStore 链接参数中传入的 `ruleSet` 会覆盖该默认值。传入 `manual` 使用内置受限组合，也可填写用分号或逗号分隔的服务 key，例如 `ruleSet=github;ads` 仅启用 GitHub 和广告过滤。可用服务 key 为：`apple`、`microsoft`、`github`、`google`、`ai`、`spotify`、`youtube`、`bahamut`、`netflix`、`tiktok`、`disney`、`pixiv`、`hbo`、`mediahktw`、`biliintl`、`hulu`、`primevideo`、`telegram`、`line`、`whatsapp`、`games`、`japan`、`russia`、`oracle`、`ads`。 |
 | `regionSet` | string | `all` | 生成的地区策略组。可填写用分号或逗号分隔的地区代码，例如 `HK;JP;US`；可用地区代码为：`HK`、`US`、`JP`、`KR`、`SG`、`CN`、`TW`、`GB`、`DE`、`MY`、`TR`、`CA`、`AU`、`RU`。 |
 | `interfaceName` | string | 空字符串 | 非空时写入 Mihomo 的 `interface-name`。 |
 | `excludeHighPercentage` | boolean | `true` | 是否将倍率高于 `globalRatioLimit` 的节点排除出测速组；默认仍保留在手动选择的“其他节点”组中。 |

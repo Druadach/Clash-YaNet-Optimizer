@@ -260,6 +260,7 @@ const ruleOptions = {
   games: true,
   japan: false,
   russia: true,
+  oracle: true,
   ads: true,
 }
 
@@ -804,6 +805,17 @@ const serviceConfigs = [
       'DOMAIN-SUFFIX,vk.com,俄罗斯网站',
       'DOMAIN-SUFFIX,yandex.com,俄罗斯网站',
       'GEOIP,RU,俄罗斯网站,no-resolve',
+    ],
+  },
+  {
+    key: 'oracle',
+    name: '甲骨文云',
+    directFirst: true,
+    icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png',
+    url: 'https://www.oracle.com/robots.txt',
+    rules: [
+      'DOMAIN-SUFFIX,oracle.com,甲骨文云',
+      'DOMAIN-SUFFIX,oraclecloud.com,甲骨文云',
     ],
   },
 ]
