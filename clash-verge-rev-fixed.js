@@ -809,13 +809,13 @@ const serviceConfigs = [
   },
   {
     key: 'oracle',
-    name: '甲骨文云',
+    name: 'Oracle',
     directFirst: true,
     icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png',
     url: 'https://www.oracle.com/robots.txt',
     rules: [
-      'DOMAIN-SUFFIX,oracle.com,甲骨文云',
-      'DOMAIN-SUFFIX,oraclecloud.com,甲骨文云',
+      'DOMAIN-SUFFIX,oracle.com,Oracle',
+      'DOMAIN-SUFFIX,oraclecloud.com,Oracle',
     ],
   },
 ]
