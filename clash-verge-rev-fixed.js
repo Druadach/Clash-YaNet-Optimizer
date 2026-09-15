@@ -705,7 +705,7 @@ const serviceConfigs = [
   {
     key: 'whatsapp',
     name: 'WhatsApp',
-    icon: 'https://static.whatsapp.net/rsrc.php/v3/yP/r/rYZqPCBaG70.png',
+    icon: 'https://raw.githubusercontent.com/homarr-labs/dashboard-icons/main/png/whatsapp.png',
     url: 'https://web.whatsapp.com/data/manifest.json',
     rules: ['GEOSITE,whatsapp,WhatsApp'],
   },
