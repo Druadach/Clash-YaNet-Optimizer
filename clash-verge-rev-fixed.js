@@ -303,7 +303,28 @@ const baseRules = [
 ]
 
 // 自定义规则只描述数据，生成逻辑负责转换为 Mihomo 规则。
+// 这些规则被插在服务规则之前，因此优先于广告过滤命中。
+//
+// Google Analytics 后台放行：测量上报域名（analytics.google.com、
+// www.google-analytics.com 等）被 category-ads-all 与 adblockmihomo
+// 同时收录，拦截后后台自身也打不开（mihomo 日志可见
+// match GeoSite(category-ads-all) using 广告过滤[拒绝]）。
+// 这里只放行后台入口与 GA4 官方 API，落到兜底的「其他网站」组
+// （该组恒存在，不会因 ruleSet 未启用 google/ads 而悬空）。
+// 后台入口用 DOMAIN 精确匹配而不是 DOMAIN-SUFFIX：analytics.google.com
+// 同时也是 GA4 采集端点之一，用后缀会连带放行
+// region1.analytics.google.com 等采集子域。
+// 纯采集端点（www.google-analytics.com、google-analytics.com、
+// googletagmanager.com）保持拦截。
 const customRules = {
+  analyticsConsole: {
+    target: '其他网站',
+    domain: ['analytics.google.com'],
+    domainSuffix: [
+      'analyticsdata.googleapis.com',
+      'analyticsadmin.googleapis.com',
+    ],
+  },
   // direct: {
   //   target: '直连',
   //   domainSuffix: [],
