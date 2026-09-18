@@ -261,6 +261,7 @@ const ruleOptions = {
   japan: false,
   russia: true,
   oracle: true,
+  r2: true,
   ads: true,
 }
 
@@ -837,6 +838,20 @@ const serviceConfigs = [
     rules: [
       'DOMAIN-SUFFIX,oracle.com,Oracle',
       'DOMAIN-SUFFIX,oraclecloud.com,Oracle',
+    ],
+  },
+  {
+    key: 'r2',
+    name: 'Cloudflare R2',
+    directFirst: true,
+    icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Cloudflare.png',
+    url: 'https://www.cloudflare.com/robots.txt',
+    rules: [
+      // R2 的 S3 API 端点（<accountid>.r2.cloudflarestorage.com），预签名上传走这里
+      'DOMAIN-SUFFIX,r2.cloudflarestorage.com,Cloudflare R2',
+      // 桶绑定的自定义域；经代理会被 Cloudflare 质询（403），必须直连
+      'DOMAIN-SUFFIX,slow-r2.oss.dpdns.org,Cloudflare R2',
+      'DOMAIN-SUFFIX,oss.qianling.pw,Cloudflare R2',
     ],
   },
 ]
