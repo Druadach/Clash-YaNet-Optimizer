@@ -741,6 +741,7 @@ const serviceConfigs = [
   {
     key: 'games',
     name: '游戏专用',
+    directFirst: true,
     icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png',
     rules: [
       'GEOSITE,category-games@cn,国内网站',
