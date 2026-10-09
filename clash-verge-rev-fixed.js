@@ -326,6 +326,13 @@ const customRules = {
       'analyticsadmin.googleapis.com',
     ],
   },
+  // Ozon 买家端公开页：显式钉到直连，不依赖「俄罗斯网站」组当前的节点选择。
+  // 注意：`DOMAIN-SUFFIX,ru` 只覆盖 *.ru；买家端还依赖 ozonusercontent.com / *.ozone.ru 等
+  // 非 .ru 后端域，它们会落到 MATCH 兜底走代理——需要时把域名补进下面的数组。
+  ozonBuyer: {
+    target: '直连',
+    domain: ['ozon.ru', 'www.ozon.ru'],
+  },
   // direct: {
   //   target: '直连',
   //   domainSuffix: [],
